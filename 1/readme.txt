@@ -1,1 +1,0 @@
-requirejs写的，jsonp接口渲染页面
