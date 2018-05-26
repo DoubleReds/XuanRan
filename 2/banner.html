@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/gp6.banner.css">
+    <style>
+        /*使用者的身份去编写css*/
+        body{
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="gp6-banner-container">
+        <!--轮播图 主体-->
+        <div class="gp6-banner-wrapper">
+            <div class="gp6-banner-item gp6-active">itme1</div>
+            <div class="gp6-banner-item">itme2</div>
+            <div class="gp6-banner-item">itme3</div>
+            <div class="gp6-banner-item">itme4</div>
+        </div>
+        <!--轮播图 分页按钮-->
+        <div class="gp6-banner-pagination"></div>
+        <!--轮播图 前后按钮-->
+        <div class="gp6-button-prev"></div>
+        <div class="gp6-button-next"></div>
+        
+    </div>
+    <script src="libs/jquery-3.3.1.js"></script>
+    <script src="libs/jquery.banner.js"></script>
+    <script>
+        //轮播图插件;
+        $(function(){
+            $(".gp6-banner-container")
+            .gpBanner(".gp6-banner-wrapper",{
+                navigation: {
+                    nextEl: '.gp6-button-next',
+                    prevEl: '.gp6-button-prev',
+                },
+                pagination:{
+                    el:".gp6-banner-pagination"
+                },
+                direction:"scroll",
+                loop:true
+            }) 
+
+ 
+
+        })
+    </script>
+</body>
+</html>
